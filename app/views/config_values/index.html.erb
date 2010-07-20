@@ -1,0 +1,31 @@
+<h3>Listing Config Values</h3>
+
+<table width="100%" border="1">
+  <tr>
+	<th>System</th>
+	<th>Code</th>
+	<th>Value</th>
+	<th>Description 1</th>
+	<th>Description 2</th>
+	<th width="150 px">Option</th>
+  </tr>
+
+<% for config_value in @config_values %>
+  <tr>
+		<td><%= config_value.system -%></td>
+		<td><%= config_value.code -%></td>
+		<td><%= config_value.value -%></td>
+		<td><%= config_value.description_1 -%></td>
+		<td><%= config_value.description_2 -%></td>
+    <td>
+			<%= link_to 'Show', config_value %>
+    	<%= link_to 'Edit', edit_config_value_path(config_value) %>
+    	<%= link_to 'Destroy', config_value, :confirm => 'Are you sure?', :method => :delete %>
+		</td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New config value', new_config_value_path %>

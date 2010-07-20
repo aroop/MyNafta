@@ -1,0 +1,15 @@
+<div class="listmainwrapper"> 
+	<div class="listheadingwrapper"> 
+		<div class="listleft"> 
+			<div class="listicon"><img src="/images/filmrill.jpg" width="12" height="15" /></div>
+			<div class="listsubhead"> <%= get_section_title(videos_item) -%> Videos </div>
+		</div>
+		<div class="listright">
+			<div class="listviewdetails"> <%= link_to "View all", view_all_videos_link(videos_item) %></div>
+			<div class="listviewdetails"> <%= link_to "Upload a video", new_video_link(videos_item) %></div>
+		</div>
+	</div>
+	<div class="listthumcontainer">
+		<%= render :partial => '/shared/video', :collection => videos_item.videos %>
+	</div>
+</div>

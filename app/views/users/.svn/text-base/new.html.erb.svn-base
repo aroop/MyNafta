@@ -1,0 +1,46 @@
+<div class="contenttopnavigation">
+	<div class="contenttopnavleft"> 
+		<div class="contenttopnavicon">
+			<img src="/images/signup_key.gif" width="26" height="22" />
+		</div>
+		<div class="contenttopnavtext">
+			Signup with Mekosam
+		</div>
+	</div>
+</div>
+<!-- Actor wrapper strats here -->
+<div class="actorwrapper">
+	<div class="registertopcont"> 
+		<div class="registertoptext">
+			<%= link_to "Already a member? click here to login", "/login" %>
+		</div>
+
+		<div class="registerwrapper" align="center"> 
+			<%= error_messages_for :user %>
+	
+			<% form_for :user, :url => users_path do |@f| -%>
+				<div class="registercontainer" id="content"> 
+					<%= render :partial => '/shared/field_entry', :locals => {:text => 'User Name:', :field_name => :login} %>
+					<%= render :partial => '/shared/field_entry', :locals => {:text => 'Email:', :field_name => :email} %>
+					<%= render :partial => '/shared/field_entry', :locals => {:text => 'First Name:', :field_name => :first_name} %>
+					<%= render :partial => '/shared/field_entry', :locals => {:text => 'Last Name:', :field_name => :last_name} %>
+					<%= render :partial => '/shared/password_entry', :locals => {:text => 'Password:', :field_name => :password} %>
+					<%= render :partial => '/shared/password_entry', :locals => {:text => 'Confirm Password:', :field_name => :password_confirmation} %>
+					<div class="regformcont"> 
+						<div class="regfieldname">
+  						<input type="checkbox" name="checkbox" value="checkbox" />
+						</div>
+						<div class="regfieldaccept">
+							Accept Terms and Conditions
+						</div>
+					</div>
+					<div class="regformcont"> 
+						<div class="regfieldbutton">
+							<%= image_submit_tag "/images/but_join.gif", :border=>"0"  %> 
+						</div>
+					</div>
+				</div>
+			<% end -%>
+		</div>
+	</div>
+</div>

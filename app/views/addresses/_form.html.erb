@@ -1,0 +1,21 @@
+	<div class="regformcont"> 
+		<div class="regfieldname">Type:</div>
+		<div class="regfieldinput"><%= @f.select :address_type, ["Supplier", "Importer", "Customer"] %></div>
+	</div>
+	<%= render :partial => '/shared/field_entry', :locals => {:text => 'Name:', :field_name => :name} %>
+	<%= render :partial => '/shared/field_entry', :locals => {:text => 'Contact:', :field_name => :contact} %>
+	<%= render :partial => '/shared/field_entry', :locals => {:text => 'Address 1:', :field_name => :address_1} %>
+	<%= render :partial => '/shared/field_entry', :locals => {:text => 'Address 2:', :field_name => :address_2} %>
+	<%= render :partial => '/shared/field_entry', :locals => {:text => 'Address 3:', :field_name => :address_3} %>
+	<%= render :partial => '/shared/field_entry', :locals => {:text => 'Address 4:', :field_name => :address_4} %>
+	<%= render :partial => '/shared/field_entry', :locals => {:text => 'City:', :field_name => :city} %>
+	<%= render :partial => '/shared/field_entry', :locals => {:text => 'County:', :field_name => :county} %>
+	<%= render :partial => '/shared/field_entry', :locals => {:text => 'State / Province:', :field_name => :state} %>
+	<%= render :partial => '/shared/field_entry', :locals => {:text => 'Country:', :field_name => :country} %>
+	<%= render :partial => '/shared/field_entry', :locals => {:text => 'Tax ID:', :field_name => :tax_id} %>
+	<%= render :partial => '/shared/field_entry', :locals => {:text => 'Status:', :field_name => :status} %>
+	<%= render :partial => '/shared/field_entry', :locals => {:text => 'DUNSNUMBER:', :field_name => :dunsnumber} %>
+	<%= render :partial => '/shared/field_entry', :locals => {:text => 'Phone No:', :field_name => :phone_no} %>
+	<%= render :partial => '/shared/field_entry', :locals => {:text => 'Email:', :field_name => :email} %>
+	<%= render :partial => '/shared/field_entry', :locals => {:text => 'Fax:', :field_name => :fax} %>
+	<%= render :partial => '/shared/field_entry', :locals => {:text => 'Postal Code:', :field_name => :postal_code} %>

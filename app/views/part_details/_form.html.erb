@@ -1,0 +1,39 @@
+  <%= render :partial => '/shared/field_entry', :locals => {:text => 'Status:', :field_name => :status} %>
+  <%= render :partial => '/shared/field_entry', :locals => {:text => 'Item number:', :field_name => :item_number} %>
+  <%= render :partial => '/shared/field_entry', :locals => {:text => 'Supplier Item:', :field_name => :supplier_item} %>
+  <%= render :partial => '/shared/field_entry', :locals => {:text => 'Item Description:', :field_name => :item_description} %>
+  <%= render :partial => '/shared/field_entry', :locals => {:text => 'HS Tariff Code:', :field_name => :hs_tariff_code} %>
+	<div class="regformcont"> 
+		<div class="regfieldname">Preference Criteria:</div>
+		<div class="regfieldinput">
+			<%= collection_select(:part_detail, :pref_criteria, ConfigValue.preference_criterias, :value, :value) %>
+		</div>
+	</div>		
+	<div class="regformcont"> 
+		<div class="regfieldname">Producer:</div>
+		<div class="regfieldinput">
+			<%= collection_select(:part_detail, :producer, ConfigValue.producers, :value, :value) %>
+		</div>
+	</div>		
+	<div class="regformcont"> 
+		<div class="regfieldname">Net Cost:</div>
+		<div class="regfieldinput">
+			<%= collection_select(:part_detail, :net_cost, ConfigValue.net_costs, :value, :value) %>
+		</div>
+	</div>		
+	<div class="regformcont"> 
+		<div class="regfieldname">Nafta COO:</div>
+		<div class="regfieldinput">
+			<%= collection_select(:part_detail, :nafta_coo, ConfigValue.coos, :value, :value) %>
+		</div>
+	</div>
+  <%= render :partial => '/shared/field_entry', :locals => {:text => 'Item Type:', :field_name => :item_type} %>
+  <%= render :partial => '/shared/field_entry', :locals => {:text => 'Plant ID:', :field_name => :plant_id} %>
+  <%= render :partial => '/shared/field_entry', :locals => {:text => 'Electronic ID:', :field_name => :electronic_id} %>
+  <%= render :partial => '/shared/field_entry', :locals => {:text => 'Product Style:', :field_name => :product_style} %>
+  <%= render :partial => '/shared/field_entry', :locals => {:text => 'Certified:', :field_name => :certified} %>
+  <%= render :partial => '/shared/field_entry', :locals => {:text => 'Certificate Number:', :field_name => :certificate_no} %>
+	<div class="regformcont"> 
+		<div class="regfieldname">Supplier:</div>
+		<div class="regfieldinput"><%= collection_select (:part_detail, :address_id, Address.suppliers, :id, :name) %></div>
+	</div>

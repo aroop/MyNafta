@@ -1,0 +1,39 @@
+<%= render :partial => '/shared/field_entry', :locals => {:text => 'User Name:', :field_name => :login} %>
+
+<div class="regformcont"> 
+	<div class="regfieldname">Role:</div>
+	<div class="regfieldinput">
+		<%= collection_select(:user, :role_id, Role.find(:all), :id, :name) %>
+	</div>
+</div>		
+
+<%= render :partial => '/shared/field_entry', :locals => {:text => 'Email:', :field_name => :email} %>
+<%= render :partial => '/shared/field_entry', :locals => {:text => 'First Name:', :field_name => :first_name} %>
+<%= render :partial => '/shared/field_entry', :locals => {:text => 'Middle Name:', :field_name => :middle_name} %>
+<%= render :partial => '/shared/field_entry', :locals => {:text => 'Last Name:', :field_name => :last_name} %>
+<%= render :partial => '/shared/password_entry', :locals => {:text => 'Password:', :field_name => :password} %>
+<%= render :partial => '/shared/password_entry', :locals => {:text => 'Confirm Password:', :field_name => :password_confirmation} %>
+<%= render :partial => '/shared/field_entry', :locals => {:text => 'Title:', :field_name => :title} %>
+<%= render :partial => '/shared/field_entry', :locals => {:text => 'Company:', :field_name => :company} %>
+<%= render :partial => '/shared/field_entry', :locals => {:text => 'Phone:', :field_name => :phone} %>
+<%= render :partial => '/shared/field_entry', :locals => {:text => 'Fax:', :field_name => :fax} %>
+<div class="regformcont"> 
+	<div class="regfieldname">Suppliers</div>
+	<div class="regfieldinput">
+		<select size="8" name="supplier[id][]" multiple="multiple" id="supplier_id">
+				<% Address.suppliers.each do |supplier| -%>
+					<option <%= (!@addresses.index(supplier.id).nil?)? "selected=selected" : "" -%> value="<%= supplier.id -%>"><%= supplier.name -%></option>
+				<% end -%>
+		</select>
+	</div>
+</div>		
+<div class="regformcont"> 
+	<div class="regfieldname">Importers</div>
+	<div class="regfieldinput">
+		<select size="8" name="importer[id][]" multiple="multiple" id="importer_id">
+				<% Address.importers.each do |importer| -%>
+					<option <%= (!@addresses.index(importer.id).nil?)? "selected=selected" : "" -%> value="<%= importer.id -%>"><%= importer.name -%></option>
+				<% end -%>
+		</select>
+	</div>
+</div>

@@ -1,0 +1,80 @@
+<% @page_title = "NaftaApp - Certification Assist" -%>
+
+<h3>Certification Assist</h3>
+
+<p>Please provide the initial configuration required for the search</p>
+
+<% form_tag('/home/get_parts_list') do -%>
+	<div class="registercontainer" id="content">
+		<div class="regformcont"> 
+			<div class="regfieldname">Manufacturer</div>
+			<div class="regfieldinput">
+				<%= collection_select(:primary_supplier, :id, current_user.addresses.suppliers, :id, :name) %>
+			</div>
+		</div>
+		<div class="regformcont"> 
+			<div class="regfieldname">Importer</div>
+			<div class="regfieldinput">
+				<%= collection_select(:primary_importer, :id, current_user.addresses.importers, :id, :name) %>
+			</div>
+		</div>
+		<div class="regformcont"> 
+			<div class="regfieldname">Request Type</div>
+			<div class="regfieldinput">
+				<%= radio_button_tag 'request_type', 'blanket', true -%> Blanket Request
+				<%= radio_button_tag 'request_type', 'reference' -%> Reference Request
+			</div>
+		</div>
+		<div id="blanket">
+			<div class="regformcont"> 
+				<div class="regfieldname">From Date:</div>
+				<div class="regfieldinput">
+					<%= calendar_date_select_tag "from_date", nil %>
+				</div>
+			</div>
+			<div class="regformcont"> 
+				<div class="regfieldname">End Date:</div>
+				<div class="regfieldinput">
+					<%= calendar_date_select_tag "end_date", nil %>
+				</div>
+			</div>			
+		</div>
+		<div id="reference" style="display:none;">
+			<div class="regformcont"> 
+				<div class="regfieldname">Reference Code:</div>
+				<div class="regfieldinput">
+					<%= select_tag :reference_code, options_for_select(["Purchase Order", "Invoice", "Bill of lading"]) %>
+					<%#= text_field_tag 'reference_code', "", :size => "30" %>
+				</div>
+			</div>
+			<div class="regformcont"> 
+				<div class="regfieldname">Reference Number:</div>
+				<div class="regfieldinput"><%= text_field_tag 'reference_number', "", :size => "30" %></div>
+			</div>
+		</div>
+		<div class="regformcont"> 
+			<div class="regfieldname">Suppliers:</div>
+			<div class="regfieldinput">
+				<%= collection_select(:supplier, :id, current_user.addresses.suppliers, :id, :id_with_name, 
+								options ={}, {:multiple => true, :size => 6}) %>
+			</div>
+		</div>
+		<div class="regformcont"> 
+			<div class="regfieldname"></div>
+			<div class="regfieldinput"><%= submit_tag "Submit" %> </div>
+		</div>
+	</div>
+<% end -%>
+
+<% content_for :js do -%>
+<script type="text/javascript">
+	Event.observe('request_type_blanket', 'click', function() {
+			$('blanket').style.display = "block";
+			$('reference').style.display = "none";
+		});
+	Event.observe('request_type_reference', 'click', function() {
+		$('blanket').style.display = "none";
+		$('reference').style.display = "block";
+		});
+</script>
+<% end -%>

@@ -1,0 +1,11 @@
+<h1>New certified_repository</h1>
+
+<% form_for(@certified_repository) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', certified_repositories_path %>

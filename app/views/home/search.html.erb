@@ -1,0 +1,20 @@
+<% @page_title = "myNafta - Nafta Maintenance" -%>
+<h3>Nafta Maintenance</h3>
+
+<p>Please select suppliers</p>
+
+<% form_tag('/home/do_search') do -%>
+	<div class="registercontainer" id="content">
+		<div class="regformcont"> 
+			<div class="regfieldname">Suppliers</div>
+			<div class="regfieldinput">
+				<%= collection_select(:supplier, :id, current_user.addresses.suppliers, :id, :name, 
+								options ={}, {:multiple => true, :size => 8}) %>
+			</div>
+		</div>
+		<div class="regformcont"> 
+			<div class="regfieldname"></div>
+			<div class="regfieldinput"><%= submit_tag 'Maintain Partss' %> </div>
+		</div>
+	</div>
+<% end -%>

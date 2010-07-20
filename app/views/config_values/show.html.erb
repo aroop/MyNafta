@@ -1,0 +1,8 @@
+<strong>System:</strong> <%= @config_value.system%><br /><br />
+<strong>Code:</strong> <%= @config_value.code%><br /><br />
+<strong>Value:</strong> <%= @config_value.value%><br /><br />
+<strong>Description 1:</strong> <%= @config_value.description_1%><br /><br />
+<strong>Description 2:</strong> <%= @config_value.description_2%><br /><br />
+
+<%= link_to 'Edit', edit_config_value_path(@config_value) %> |
+<%= link_to 'Back', config_values_path %>

@@ -1,0 +1,13 @@
+<h4>Editing users - <%= @user.full_name -%></h4>
+
+<% form_for @user, :url => admin_user_path(@user) do |@f| -%>
+	<div class="registercontainer" id="content">
+		<%= render :partial => 'form' %>
+		<div class="regformcont"> 
+			<div class="regfieldname"></div>
+			<div class="regfieldbutton">
+				<%= submit_tag "Update User" %> 
+			</div>
+		</div>		
+	</div>
+<% end %>

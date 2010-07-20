@@ -1,0 +1,15 @@
+<div class="listmainwrapper"> 
+	<div class="listheadingwrapper"> 
+		<div class="listleft"> 
+			<div class="listicon"><img src="/images/cartoon.jpg" width="16" height="16" /></div>
+			<div class="listsubhead"> User Comments </div>
+		</div>
+		<div class="listright">
+			<div class="listviewdetails"><%= link_to "Post a comment", new_comment_link(comments_item) %></div>
+			<div class="listviewdetails"><%= link_to "View All", view_all_comments_link(comments_item) %></div>
+		</div>
+	</div>
+	<div class="filimwrapper" align="center"> 
+		<%= render :partial => '/shared/comment', :collection => comments_item.comments %>
+	</div>
+</div>

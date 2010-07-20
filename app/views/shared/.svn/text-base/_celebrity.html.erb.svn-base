@@ -1,0 +1,12 @@
+<div class="videoholdwrapper"> 
+	<div class="videoholdcontainer">
+		<div class="videoclipbg">
+			<div class="videoclipholder"> 
+				<%#= image_tag celebrity.photo.url(:thumb) %>
+			</div>
+		</div>
+	</div>
+	<div class="videotitlecontainer">
+		<div class="videotitlehead"><%= link_to celebrity.name, celebrity_path(celebrity) %></div> 
+	</div>
+</div>

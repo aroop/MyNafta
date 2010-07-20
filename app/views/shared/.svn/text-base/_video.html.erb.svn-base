@@ -1,0 +1,12 @@
+<div class="videoholdwrapper"> 
+	<div class="videoholdcontainer">
+		<div class="videoclipbg">
+			<div class="videoclipholder"> 
+				<%= link_to image_tag(video.thumbnail(:thumb), :border => 0), video_path(video) %>
+			</div>
+		</div>
+	</div>
+	<div class="videotitlecontainer">
+		<div class="videotitlehead"><%= link_to video.title, video_path(video) %></div> 
+	</div>
+</div>

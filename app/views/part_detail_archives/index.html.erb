@@ -1,0 +1,18 @@
+<h1>Listing part_detail_archives</h1>
+
+<table>
+  <tr>
+  </tr>
+
+<% for part_detail_archive in @part_detail_archives %>
+  <tr>
+    <td><%= link_to 'Show', part_detail_archive %></td>
+    <td><%= link_to 'Edit', edit_part_detail_archive_path(part_detail_archive) %></td>
+    <td><%= link_to 'Destroy', part_detail_archive, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New part_detail_archive', new_part_detail_archive_path %>

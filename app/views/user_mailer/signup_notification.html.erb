@@ -1,0 +1,14 @@
+Hello <%=h @user.first_name %>, 
+
+Admin has created a new account for you.
+
+To activate your account at the application, follow the link below:
+ 
+  <%= @url %>
+
+Your login credentials are:
+User name: <%= @user.login -%>
+Password:  <%= @user.password -%>
+  
+Thanks,
+NaftaApp Team

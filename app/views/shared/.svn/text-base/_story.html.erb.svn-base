@@ -1,0 +1,25 @@
+<div class="filimwrapper" align="center"> 
+	<div class="filimcontainer">
+		<div class="filimleft"> 
+			<div class="fiilmphotoframe"> 
+				<div class="fiilmphoto"></div>
+			</div>
+		</div>
+		<div class="filimright"> 
+			<div class="fiilmrightcont">
+				<div class="fiilmrightcontleft">
+					<div class="fiilmrightmoviehead"> <a href="#"><%= story.title -%></a> </div>
+				</div>
+				<div class="fiilmrightcontright">
+					<div class="filimgraphyrateing">
+						<div class="actordetailblack">Posted by:</div>
+						<div class="actordetailorgane"><%= story.user.login -%></div>
+					</div>
+				</div>
+			</div>
+			<div class="fiilmrightcont"> 
+				<div class="filimographycontent"><%= story.description -%></div>
+			</div>
+		</div>
+	</div>
+</div>

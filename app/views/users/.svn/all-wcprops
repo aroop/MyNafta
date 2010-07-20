@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/mekosam/!svn/ver/40/trunk/app/views/users
+END
+change_password.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/mekosam/!svn/ver/6/trunk/app/views/users/change_password.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/mekosam/!svn/ver/22/trunk/app/views/users/new.html.erb
+END
+account.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/mekosam/!svn/ver/40/trunk/app/views/users/account.html.erb
+END
+forgot_password.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/mekosam/!svn/ver/22/trunk/app/views/users/forgot_password.html.erb
+END
+reset_password.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/mekosam/!svn/ver/22/trunk/app/views/users/reset_password.html.erb
+END

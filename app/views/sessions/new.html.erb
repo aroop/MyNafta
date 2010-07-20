@@ -1,0 +1,20 @@
+<% form_tag session_path do -%>
+	<div class="registercontainer" id="content">
+		<div class="regformcont"> 
+			<div class="regfieldname">Login</div>
+			<div class="regfieldinput"><%= text_field_tag 'login', "", :size => "30" %></div>
+		</div>
+		<div class="regformcont"> 
+			<div class="regfieldname">Password</div>
+			<div class="regfieldinput"><%= password_field_tag 'password', "", :size => "30" %></div>
+		</div>
+		<div class="regformcont"> 
+			<div class="regfieldname"></div>
+			<div class="regfieldinput"><%= submit_tag "Submit" %> </div>
+		</div>
+		<div class="regformcont"> 
+			<div class="regfieldname"></div>
+			<div class="regfieldinput"><%= link_to 'Forgot password?', forgot_password_url %> </div>
+		</div>
+	</div>
+<% end -%>

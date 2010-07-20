@@ -1,0 +1,15 @@
+						<h4><span>Admin</span> Modules</h4>
+						<ul class="links">
+						<li class="<%= action_is('users')? "active" : "" -%>">
+							<%= link_to "<span class='users'>Users</span>", {:controller => "/admin/users", :action => "index"}, :class => "button" %>
+						</li>
+						<li class="<%= action_is('sections')? "active" : "" -%>" >
+							<%= link_to "<span class='sections'>Sections</span>", {:controller => "/administration", :action => "sections"}, :class => "button" %>
+						</li>							
+						<li class="<%= action_is('email')? "active" : "" -%>" >
+							<%= link_to "<span class='msg'>Email</span>", {:controller => "/administration", :action => "email"}, :class => "button" %>
+						</li>							
+						<li class="<%= action_is('preferences')? "active" : "" -%>" >
+							<%= link_to "<span class='options'>Preferences</span>", {:controller => "/administration", :action => "preferences"}, :class => "button" %>
+						</li>							
+					</ul>

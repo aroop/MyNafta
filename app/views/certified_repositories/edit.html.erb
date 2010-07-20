@@ -1,0 +1,12 @@
+<h1>Editing certified_repository</h1>
+
+<% form_for(@certified_repository) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @certified_repository %> |
+<%= link_to 'Back', certified_repositories_path %>

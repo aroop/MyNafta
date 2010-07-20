@@ -1,0 +1,43 @@
+<table class="general">
+	<caption>Listing users</caption>
+	<thead>
+  <tr>
+		<th>Login</th>
+		<th>Name</th>
+		<th>Role</th>
+		<th>State</th>
+		<th>Title</th>
+		<th>Company</th>
+		<th>Phone</th>
+		<th>Options</th>
+  </tr>
+</thead>
+<tbody><% for user in @users %>
+  <tr>
+		<td><%= link_to user.login, admin_user_path(user) %></td>
+		<td><%= user.full_name -%></td>
+		<td><%= user.role.name -%></td>
+		<td><%= user.state -%></td>
+		<td><%= user.title -%></td>
+		<td><%= user.company -%></td>
+		<td><%= user.phone -%></td>
+    <td> <%= link_to 'Edit', edit_admin_user_path(user) %> |
+    		 <%= link_to 'Destroy', admin_user_path(user), :confirm => 'Are you sure?', :method => :delete %>
+		</td>
+  </tr>
+<% end %>
+</tbody>
+	<tfoot>
+		<tr>
+			<th scope="row">Total</th>
+			<td colspan="8"><%= @users.size -%> users</td>
+		</tr>
+	</tfoot>
+</table>
+
+<% content_for :side_menu do -%>
+	<h4><span>User Module</span> Options</h4>
+	<ul class="links">
+	<%= link_to '<span class="user">Add new user</span>', new_admin_user_path, :class => 'button' %>
+	</ul>
+<% end -%>

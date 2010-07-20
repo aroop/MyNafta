@@ -1,0 +1,32 @@
+<div class="filimcontainer">
+	<div class="filimleft"> 
+		<div class="fiilmphotoframe"> 
+			<div class="fiilmphoto">
+				<%= image_tag User.find(comment.user_id).avatar.url(:thumb) %>
+			</div>
+		</div>
+	</div>
+	<div class="filimright"> 
+		<div class="fiilmrightcont">
+			<div class="fiilmrightcontleft">
+				<div class="filimdateblack"> Posted:</div>
+				<div class="filimdateblue"> <%= time_ago_in_words comment.created_at -%> ago</div>
+				<!--div class="filimdateblack"> Time:</div>
+				<div class="filimdateblue"> 4:30 pm </div-->
+			</div>
+			<div class="fiilmrightcontright">
+				<div class="filimgraphyrateing">
+					<div class="filimrateicon"><a href="#"><img src="/images/commet_icon.gif" border="0" /></a></div>
+					<div class="actordetailblack">|</div>
+					<div class="filimrateicon"><a href="#"><img src="/images/delete_icon.gif" border="0" /></a></div>
+					<div class="actordetailblack">|</div>
+					<div class="actordetailblack">Posted by:</div>
+					<div class="actordetailorgane"><%= link_to comment.user.login, user_path(comment.user_id) %></div>
+				</div>
+			</div>
+		</div>
+		<div class="fiilmrightcont"> 
+			<div class="filimographycontent"><%= comment.comment -%></div>
+		</div>
+	</div>
+</div>

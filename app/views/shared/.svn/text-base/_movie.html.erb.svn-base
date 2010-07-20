@@ -1,0 +1,12 @@
+<div class="videoholdwrapper"> 
+	<div class="videoholdcontainer">
+		<div class="videoclipbg">
+			<div class="videoclipholder"> 
+				<%= image_tag movie.poster.url(:thumb) %>
+			</div>
+		</div>
+	</div>
+	<div class="videotitlecontainer">
+		<div class="videotitlehead"><%= link_to movie.title, movie_path(movie) %></div> 
+	</div>
+</div>

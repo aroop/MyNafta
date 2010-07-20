@@ -1,0 +1,34 @@
+<h4>Supplier's Item Information</h4>
+	<% @suppliers.each do |supplier| %>
+	<% unless supplier.part_details.size == 0 -%>
+	<table class="general">
+		<caption><span>Supplier ID: </span><%= supplier.id -%>, <span>Name: </span><%= supplier.name %></caption>
+		<thead>
+		<tr>
+		<th scope="col">Supplier Item</th>
+		<th>Customer Item Number</th>
+		<th>Item Description</th>
+		<th>HS Tariff Code</th>
+		<th>Preference Criteria</th>
+		<th>Producer</th>
+		<th>Net Cost</th>
+		<th>NAFTA Origin</th>
+  </tr>
+</thead>
+<tbody>
+	<% supplier.part_details.each do |part_detail| %>
+  <tr>
+		<td><%= link_to part_detail.supplier_item, edit_part_detail_path(part_detail) %></td>
+		<td><%= part_detail.item_number -%></td>
+		<td><%= part_detail.item_description -%></td>
+		<td><%= part_detail.hs_tariff_code -%></td>
+		<td><%= part_detail.pref_criteria -%></td>
+		<td><%= part_detail.producer -%></td>
+		<td><%= part_detail.net_cost -%></td>
+		<td><%= part_detail.nafta_coo -%></td>
+  </tr>
+	<% end %>
+</tbody>
+	</table>
+	<% end -%>
+<% end %>

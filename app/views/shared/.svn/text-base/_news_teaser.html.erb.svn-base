@@ -1,0 +1,21 @@
+<div class="listmainwrapper"> 
+	<div class="listheadingwrapper"> 
+		<div class="listleft"> 
+			<div class="listicon"><img src="/images/actor_new_icon.gif" width="16" height="18" /></div>
+			<div class="listsubhead"> <%= get_section_title(news_item) -%>'s Latest News </div>
+		</div>
+		<div class="listright">
+			<div class="listviewdetails"><%= link_to "Post a story", new_story_link(news_item) %></div>
+			<div class="listviewdetails"> <%= link_to "View All",  view_all_stories_link(news_item)%></div>
+		</div>
+</div>
+<% if news_item.stories.size > 0 -%>
+	<%= render :partial => '/shared/story', :collection => news_item.stories %>
+<% else -%>
+	<div class="filimwrapper" align="center"> 
+		<div class="filimographycontent">
+			No stories posted for this celebrity. Would you like to add <%= link_to "one", new_story_link(news_item) %>
+		</div>
+	</div>
+<% end -%>
+</div>

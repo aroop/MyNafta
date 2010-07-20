@@ -1,0 +1,37 @@
+<h1>Listing part_details</h1>
+
+<table border="1", width="100%">
+	<tr>
+		<th>Item Number</th>
+		<th>Supplier Item</th>
+		<th>Item Description</th>
+		<th>HS Tariff Code</th>
+		<th>TPref Criteria</th>
+		<th>Producer</th>
+		<th>Net Cost</th>
+		<th>COO</th>
+  	<th width="150 px">Options</th>
+  </tr>
+
+<% for part_detail in @part_details %>
+  <tr>
+		<td><%= part_detail.item_number -%></td>
+		<td><%= part_detail.supplier_item -%></td>
+		<td><%= part_detail.item_description -%></td>
+		<td><%= part_detail.hs_tariff_code -%></td>
+		<td><%= part_detail.pref_criteria -%></td>
+		<td><%= part_detail.producer -%></td>
+		<td><%= part_detail.net_cost -%></td>
+		<td><%= part_detail.nafta_coo -%></td>
+    <td>
+			<%= link_to 'Show', part_detail %> | 
+    	<%= link_to 'Edit', edit_part_detail_path(part_detail) %> | 
+    	<%= link_to 'Destroy', part_detail, :confirm => 'Are you sure?', :method => :delete %>
+		</td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New part', new_part_detail_path %>

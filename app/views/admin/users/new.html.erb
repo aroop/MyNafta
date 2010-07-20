@@ -1,0 +1,18 @@
+<h4>New User</h4>
+
+<div class="registerwrapper"> 
+
+<%= error_messages_for :user %>
+	
+<% form_for :user, :url => admin_users_path do |@f| -%>
+	<div class="registercontainer" id="content">
+		<%= render :partial => 'form' %>
+		<div class="regformcont"> 
+			<div class="regfieldname"></div>
+			<div class="regfieldbutton">
+				<%= submit_tag "Create new User" %> 
+			</div>
+		</div>		
+	</div>
+<% end -%>
+</div>

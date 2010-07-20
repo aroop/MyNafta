@@ -1,0 +1,19 @@
+<div class="listmainwrapper">
+	<div class="listheadingwrapper"> 
+		<div class="listleft"> 
+			<div class="listicon"><img src="/images/meet_other_fans.gif" width="16" height="16" /></div>
+			<div class="listsubhead"><%= get_section_title(fans_item) -%> Fans </div>
+		</div>
+		<div class="listright">
+			<% unless current_user.has_favorite?(fans_item) -%>
+  			<div class="listviewdetails"> <a href="#">Join</a></div>
+			<% else -%>
+				<div class="listviewdetails"> <a href="#">Unsubscribe</a></div>
+			<% end -%>
+			<div class="listviewdetails"> <a href="#">View All</a></div>
+		</div>
+	</div>
+	<div class="listthumcontainer">
+		<%= render :partial => '/shared/fan', :collection => get_fans(fans_item) %>
+	</div>
+</div>

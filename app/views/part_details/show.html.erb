@@ -1,0 +1,19 @@
+<strong>Status: </strong><%= @part_detail.status %><br /><br />
+<strong>Item number: </strong><%= @part_detail.item_number %><br /><br />
+<strong>Supplier Item: </strong><%= @part_detail.supplier_item %><br /><br />
+<strong>Item Description: </strong><%= @part_detail.item_description %><br /><br />
+<strong>HS Tariff Code: </strong><%= @part_detail.hs_tariff_code %><br /><br />
+<strong>Preference Criteria: </strong><%= @part_detail.pref_criteria %><br /><br />
+<strong>Producer: </strong><%= @part_detail.producer %><br /><br />
+<strong>Net Cost: </strong><%= @part_detail.net_cost %><br /><br />
+<strong>Nafta COO: </strong><%= @part_detail.nafta_coo %><br /><br />
+<strong>Item Type: </strong><%= @part_detail.item_type %><br /><br />
+<strong>Plant ID: </strong><%= @part_detail.plant_id %><br /><br />
+<strong>Electronic ID: </strong><%= @part_detail.electronic_id %><br /><br />
+<strong>Product Style: </strong><%= @part_detail.product_style %><br /><br />
+<strong>Certified: </strong><%= @part_detail.certified %><br /><br />
+<strong>Certificate Number: </strong><%= @part_detail.certificate_no %><br /><br />
+<strong>Supplier: </strong><%= Address.find(@part_detail.address_id).name %><br /><br />
+
+<%= link_to 'Edit', edit_part_detail_path(@part_detail) %> |
+<%= link_to 'Back', part_details_path %>

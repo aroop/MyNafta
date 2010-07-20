@@ -1,0 +1,12 @@
+<div class="videoholdwrapper"> 
+	<div class="videoholdcontainer">
+		<div class="videoclipbg">
+			<div class="videoclipholder"> 
+				<%= image_tag fan.avatar.url(:thumb) %>
+			</div>
+		</div>
+	</div>
+	<div class="videotitlecontainer">
+		<div class="videotitlehead"><a href="#"><%= fan.login -%></a></div> 
+	</div>
+</div>

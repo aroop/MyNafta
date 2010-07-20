@@ -1,0 +1,16 @@
+<div id="mydiv" style="display:none; overflow:hidden; height:100px; width: 100%; background-color: #525252;"> 
+	<div class="topgraymainwrapper" align="center">
+		<div class="topgraywrapper"> 
+			<div class="topgraycontainer">
+				<div class="topgrayleft"> Hi, <%= current_user.first_name -%> </div>
+				<div class="topgrayright"> 
+					<div class="topgrayrightcontainer"> 
+						<div class="topfieldcont">
+							<%= link_to image_tag("/images/logout_button.gif", :border=>0), "/logout" %>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div> <!-- top gray main wrapper ends here -->

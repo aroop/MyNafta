@@ -1,0 +1,11 @@
+Thanks for signing up with Mekosam. We're almost done setting up your account.
+
+  Username: <%= @user.login %>
+
+
+Please follow this link to confirm your email address.
+
+  <%= @url %>
+
+Thanks,
+Mekosam Team

@@ -1,0 +1,96 @@
+<div class="contenttopnavigation">
+	<div class="contenttopnavleft"> 
+		<div class="contenttopnavtext"> Edit profile </div>
+	</div>
+</div>
+
+<div class="actorwrapper">
+	<div class="listmainwrapper">
+		<div class="listheadingwrapper">
+			<div class="listleft"> 
+				<div class="listsubhead"> General info </div>
+			</div>
+			<div class="listthumbcontainer">
+				<div class="registerwrapper" align="center"> 
+					<%= image_tag @user.avatar.url(:thumb) %>
+					<%= error_messages_for :user %>
+					<% form_for @user, :url => user_path(@user), :html => { :multipart => true } do |@f| -%>
+						<div> 
+							<%= render :partial => '/shared/field_entry', :locals => {:text => 'First Name:', :field_name => :first_name } %>
+							<%= render :partial => '/shared/field_entry', :locals => {:text => 'Last Name:', :field_name => :last_name } %>
+							<div class="regformcont"> 
+								<div class="regfieldname">Upload your icon:</div>
+								<div class="regfieldinput"><%= @f.file_field 'avatar', :size => "40" %></div>
+							</div>
+							<div class="regformcont"> 
+								<div class="regfieldname">Gender:</div>
+								<div class="regfieldinput"><%= @f.select('gender', [["Male",true],["Female",false]], {:prompt => 'Select Gender'}) %><%= @f.check_box 'hide_gender' -%><label for="user_hide_gender">Hide my gender</label></div>
+							</div>
+							<div class="regformcont"> 
+								<div class="regfieldname">Date of Birth:</div>
+								<div class="regfieldinput"><%= @f.date_select 'dob', :start_year => 1940, :end_year => 2000, :order => [:day, :month, :year], :default => {:year => 1980}, :include_blank => true %><%= @f.check_box 'hide_dob' -%><label for="user_hide_dob">Hide my Age</label></div>
+							</div>
+							<div class="regformcont"> 
+								<div class="regfieldname">Country:</div>
+								<div class="regfieldinput"><%= country_select(:user, :country, ["India", "United States", "Canada", "Australia", "United Kingdom", "United Arab Emirates"], {:prompt => 'Select Country'}) %></div>
+							</div>							
+							<%= render :partial => '/shared/area_entry', :locals => {:text => 'About me:', :field_name => :about_me } %>
+							<div class="regformcont"> 
+								<div class="regfieldname"></div>
+								<div class="regfieldinput"><%= submit_tag 'Update Profile' %></div>
+							</div>
+						</div>
+					<% end -%>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="actorwrapper">
+	<div class="listmainwrapper">
+		<div class="listheadingwrapper">
+			<div class="listleft"> 
+				<div class="listsubhead"> Change Password </div>
+			</div>
+		</div>
+		<div class="listthumcontainer">
+			<div class="registerwrapper" align="center"> 
+				<% form_tag :action => 'change_password' do  -%>
+					<div> 
+						<div class="regformcont"> 
+							<div class="regfieldname">Current Password:</div>
+							<div class="regfieldinput"><%= password_field_tag 'old_password', :size => "30" %></div>
+						</div>
+						<div class="regformcont"> 
+							<div class="regfieldname">New Password:</div>
+							<div class="regfieldinput"><%= password_field_tag 'password', :size => "30" %></div>
+						</div>
+						<div class="regformcont"> 
+							<div class="regfieldname">Confirm Password:</div>
+							<div class="regfieldinput"><%= password_field_tag 'password_confirmation', :size => "30" %></div>
+						</div>
+						<div class="regformcont"> 
+							<div class="regfieldname"></div>
+							<div class="regfieldinput"><%= submit_tag 'Change Password' %></div>
+						</div>
+					</div>
+				<% end -%>
+			</div>			
+		</div>
+	</div>
+</div>
+
+<% content_for :content_right do -%>
+	<div class="whitebg">
+		<div class="whitecontainer"> 
+			<div class="topratedborder"> 
+				<div class="topratedhead"> Delete my Account </div>
+				<%= button_to "Destroy", user_path(@user), 
+						:confirm => "Are you sure you want to leave? Once deleted all your data will be removed form the system", 
+						:method => :delete -%>
+			</div>
+		</div>
+	</div>
+<div class="rightshadow"><img src="/images/right_bottom_shadow.gif" /></div>
+<% end -%>

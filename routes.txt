@@ -1,0 +1,169 @@
+(in /Users/ajay/development/nafta)
+                        admin_users GET    /admin/users                             {:action=>"index", :controller=>"admin/users"}
+              formatted_admin_users GET    /admin/users.:format                     {:action=>"index", :controller=>"admin/users"}
+                                    POST   /admin/users                             {:action=>"create", :controller=>"admin/users"}
+                                    POST   /admin/users.:format                     {:action=>"create", :controller=>"admin/users"}
+                     new_admin_user GET    /admin/users/new                         {:action=>"new", :controller=>"admin/users"}
+           formatted_new_admin_user GET    /admin/users/new.:format                 {:action=>"new", :controller=>"admin/users"}
+                    edit_admin_user GET    /admin/users/:id/edit                    {:action=>"edit", :controller=>"admin/users"}
+          formatted_edit_admin_user GET    /admin/users/:id/edit.:format            {:action=>"edit", :controller=>"admin/users"}
+                         admin_user GET    /admin/users/:id                         {:action=>"show", :controller=>"admin/users"}
+               formatted_admin_user GET    /admin/users/:id.:format                 {:action=>"show", :controller=>"admin/users"}
+                                    PUT    /admin/users/:id                         {:action=>"update", :controller=>"admin/users"}
+                                    PUT    /admin/users/:id.:format                 {:action=>"update", :controller=>"admin/users"}
+                                    DELETE /admin/users/:id                         {:action=>"destroy", :controller=>"admin/users"}
+                                    DELETE /admin/users/:id.:format                 {:action=>"destroy", :controller=>"admin/users"}
+                      config_values GET    /config_values                           {:action=>"index", :controller=>"config_values"}
+            formatted_config_values GET    /config_values.:format                   {:action=>"index", :controller=>"config_values"}
+                                    POST   /config_values                           {:action=>"create", :controller=>"config_values"}
+                                    POST   /config_values.:format                   {:action=>"create", :controller=>"config_values"}
+                   new_config_value GET    /config_values/new                       {:action=>"new", :controller=>"config_values"}
+         formatted_new_config_value GET    /config_values/new.:format               {:action=>"new", :controller=>"config_values"}
+                  edit_config_value GET    /config_values/:id/edit                  {:action=>"edit", :controller=>"config_values"}
+        formatted_edit_config_value GET    /config_values/:id/edit.:format          {:action=>"edit", :controller=>"config_values"}
+                       config_value GET    /config_values/:id                       {:action=>"show", :controller=>"config_values"}
+             formatted_config_value GET    /config_values/:id.:format               {:action=>"show", :controller=>"config_values"}
+                                    PUT    /config_values/:id                       {:action=>"update", :controller=>"config_values"}
+                                    PUT    /config_values/:id.:format               {:action=>"update", :controller=>"config_values"}
+                                    DELETE /config_values/:id                       {:action=>"destroy", :controller=>"config_values"}
+                                    DELETE /config_values/:id.:format               {:action=>"destroy", :controller=>"config_values"}
+             certified_repositories GET    /certified_repositories                  {:action=>"index", :controller=>"certified_repositories"}
+   formatted_certified_repositories GET    /certified_repositories.:format          {:action=>"index", :controller=>"certified_repositories"}
+                                    POST   /certified_repositories                  {:action=>"create", :controller=>"certified_repositories"}
+                                    POST   /certified_repositories.:format          {:action=>"create", :controller=>"certified_repositories"}
+           new_certified_repository GET    /certified_repositories/new              {:action=>"new", :controller=>"certified_repositories"}
+ formatted_new_certified_repository GET    /certified_repositories/new.:format      {:action=>"new", :controller=>"certified_repositories"}
+          edit_certified_repository GET    /certified_repositories/:id/edit         {:action=>"edit", :controller=>"certified_repositories"}
+formatted_edit_certified_repository GET    /certified_repositories/:id/edit.:format {:action=>"edit", :controller=>"certified_repositories"}
+               certified_repository GET    /certified_repositories/:id              {:action=>"show", :controller=>"certified_repositories"}
+     formatted_certified_repository GET    /certified_repositories/:id.:format      {:action=>"show", :controller=>"certified_repositories"}
+                                    PUT    /certified_repositories/:id              {:action=>"update", :controller=>"certified_repositories"}
+                                    PUT    /certified_repositories/:id.:format      {:action=>"update", :controller=>"certified_repositories"}
+                                    DELETE /certified_repositories/:id              {:action=>"destroy", :controller=>"certified_repositories"}
+                                    DELETE /certified_repositories/:id.:format      {:action=>"destroy", :controller=>"certified_repositories"}
+               part_detail_archives GET    /part_detail_archives                    {:action=>"index", :controller=>"part_detail_archives"}
+     formatted_part_detail_archives GET    /part_detail_archives.:format            {:action=>"index", :controller=>"part_detail_archives"}
+                                    POST   /part_detail_archives                    {:action=>"create", :controller=>"part_detail_archives"}
+                                    POST   /part_detail_archives.:format            {:action=>"create", :controller=>"part_detail_archives"}
+            new_part_detail_archive GET    /part_detail_archives/new                {:action=>"new", :controller=>"part_detail_archives"}
+  formatted_new_part_detail_archive GET    /part_detail_archives/new.:format        {:action=>"new", :controller=>"part_detail_archives"}
+           edit_part_detail_archive GET    /part_detail_archives/:id/edit           {:action=>"edit", :controller=>"part_detail_archives"}
+ formatted_edit_part_detail_archive GET    /part_detail_archives/:id/edit.:format   {:action=>"edit", :controller=>"part_detail_archives"}
+                part_detail_archive GET    /part_detail_archives/:id                {:action=>"show", :controller=>"part_detail_archives"}
+      formatted_part_detail_archive GET    /part_detail_archives/:id.:format        {:action=>"show", :controller=>"part_detail_archives"}
+                                    PUT    /part_detail_archives/:id                {:action=>"update", :controller=>"part_detail_archives"}
+                                    PUT    /part_detail_archives/:id.:format        {:action=>"update", :controller=>"part_detail_archives"}
+                                    DELETE /part_detail_archives/:id                {:action=>"destroy", :controller=>"part_detail_archives"}
+                                    DELETE /part_detail_archives/:id.:format        {:action=>"destroy", :controller=>"part_detail_archives"}
+                       part_details GET    /part_details                            {:action=>"index", :controller=>"part_details"}
+             formatted_part_details GET    /part_details.:format                    {:action=>"index", :controller=>"part_details"}
+                                    POST   /part_details                            {:action=>"create", :controller=>"part_details"}
+                                    POST   /part_details.:format                    {:action=>"create", :controller=>"part_details"}
+                    new_part_detail GET    /part_details/new                        {:action=>"new", :controller=>"part_details"}
+          formatted_new_part_detail GET    /part_details/new.:format                {:action=>"new", :controller=>"part_details"}
+                   edit_part_detail GET    /part_details/:id/edit                   {:action=>"edit", :controller=>"part_details"}
+         formatted_edit_part_detail GET    /part_details/:id/edit.:format           {:action=>"edit", :controller=>"part_details"}
+                        part_detail GET    /part_details/:id                        {:action=>"show", :controller=>"part_details"}
+              formatted_part_detail GET    /part_details/:id.:format                {:action=>"show", :controller=>"part_details"}
+                                    PUT    /part_details/:id                        {:action=>"update", :controller=>"part_details"}
+                                    PUT    /part_details/:id.:format                {:action=>"update", :controller=>"part_details"}
+                                    DELETE /part_details/:id                        {:action=>"destroy", :controller=>"part_details"}
+                                    DELETE /part_details/:id.:format                {:action=>"destroy", :controller=>"part_details"}
+                              roles GET    /roles                                   {:action=>"index", :controller=>"roles"}
+                    formatted_roles GET    /roles.:format                           {:action=>"index", :controller=>"roles"}
+                                    POST   /roles                                   {:action=>"create", :controller=>"roles"}
+                                    POST   /roles.:format                           {:action=>"create", :controller=>"roles"}
+                           new_role GET    /roles/new                               {:action=>"new", :controller=>"roles"}
+                 formatted_new_role GET    /roles/new.:format                       {:action=>"new", :controller=>"roles"}
+                          edit_role GET    /roles/:id/edit                          {:action=>"edit", :controller=>"roles"}
+                formatted_edit_role GET    /roles/:id/edit.:format                  {:action=>"edit", :controller=>"roles"}
+                               role GET    /roles/:id                               {:action=>"show", :controller=>"roles"}
+                     formatted_role GET    /roles/:id.:format                       {:action=>"show", :controller=>"roles"}
+                                    PUT    /roles/:id                               {:action=>"update", :controller=>"roles"}
+                                    PUT    /roles/:id.:format                       {:action=>"update", :controller=>"roles"}
+                                    DELETE /roles/:id                               {:action=>"destroy", :controller=>"roles"}
+                                    DELETE /roles/:id.:format                       {:action=>"destroy", :controller=>"roles"}
+                          importers GET    /importers                               {:action=>"index", :controller=>"importers"}
+                formatted_importers GET    /importers.:format                       {:action=>"index", :controller=>"importers"}
+                                    POST   /importers                               {:action=>"create", :controller=>"importers"}
+                                    POST   /importers.:format                       {:action=>"create", :controller=>"importers"}
+                       new_importer GET    /importers/new                           {:action=>"new", :controller=>"importers"}
+             formatted_new_importer GET    /importers/new.:format                   {:action=>"new", :controller=>"importers"}
+                      edit_importer GET    /importers/:id/edit                      {:action=>"edit", :controller=>"importers"}
+            formatted_edit_importer GET    /importers/:id/edit.:format              {:action=>"edit", :controller=>"importers"}
+                           importer GET    /importers/:id                           {:action=>"show", :controller=>"importers"}
+                 formatted_importer GET    /importers/:id.:format                   {:action=>"show", :controller=>"importers"}
+                                    PUT    /importers/:id                           {:action=>"update", :controller=>"importers"}
+                                    PUT    /importers/:id.:format                   {:action=>"update", :controller=>"importers"}
+                                    DELETE /importers/:id                           {:action=>"destroy", :controller=>"importers"}
+                                    DELETE /importers/:id.:format                   {:action=>"destroy", :controller=>"importers"}
+                          suppliers GET    /suppliers                               {:action=>"index", :controller=>"suppliers"}
+                formatted_suppliers GET    /suppliers.:format                       {:action=>"index", :controller=>"suppliers"}
+                                    POST   /suppliers                               {:action=>"create", :controller=>"suppliers"}
+                                    POST   /suppliers.:format                       {:action=>"create", :controller=>"suppliers"}
+                       new_supplier GET    /suppliers/new                           {:action=>"new", :controller=>"suppliers"}
+             formatted_new_supplier GET    /suppliers/new.:format                   {:action=>"new", :controller=>"suppliers"}
+                      edit_supplier GET    /suppliers/:id/edit                      {:action=>"edit", :controller=>"suppliers"}
+            formatted_edit_supplier GET    /suppliers/:id/edit.:format              {:action=>"edit", :controller=>"suppliers"}
+                           supplier GET    /suppliers/:id                           {:action=>"show", :controller=>"suppliers"}
+                 formatted_supplier GET    /suppliers/:id.:format                   {:action=>"show", :controller=>"suppliers"}
+                                    PUT    /suppliers/:id                           {:action=>"update", :controller=>"suppliers"}
+                                    PUT    /suppliers/:id.:format                   {:action=>"update", :controller=>"suppliers"}
+                                    DELETE /suppliers/:id                           {:action=>"destroy", :controller=>"suppliers"}
+                                    DELETE /suppliers/:id.:format                   {:action=>"destroy", :controller=>"suppliers"}
+                          addresses GET    /addresses                               {:action=>"index", :controller=>"addresses"}
+                formatted_addresses GET    /addresses.:format                       {:action=>"index", :controller=>"addresses"}
+                                    POST   /addresses                               {:action=>"create", :controller=>"addresses"}
+                                    POST   /addresses.:format                       {:action=>"create", :controller=>"addresses"}
+                        new_address GET    /addresses/new                           {:action=>"new", :controller=>"addresses"}
+              formatted_new_address GET    /addresses/new.:format                   {:action=>"new", :controller=>"addresses"}
+                       edit_address GET    /addresses/:id/edit                      {:action=>"edit", :controller=>"addresses"}
+             formatted_edit_address GET    /addresses/:id/edit.:format              {:action=>"edit", :controller=>"addresses"}
+                            address GET    /addresses/:id                           {:action=>"show", :controller=>"addresses"}
+                  formatted_address GET    /addresses/:id.:format                   {:action=>"show", :controller=>"addresses"}
+                                    PUT    /addresses/:id                           {:action=>"update", :controller=>"addresses"}
+                                    PUT    /addresses/:id.:format                   {:action=>"update", :controller=>"addresses"}
+                                    DELETE /addresses/:id                           {:action=>"destroy", :controller=>"addresses"}
+                                    DELETE /addresses/:id.:format                   {:action=>"destroy", :controller=>"addresses"}
+                              users GET    /users                                   {:action=>"index", :controller=>"users"}
+                    formatted_users GET    /users.:format                           {:action=>"index", :controller=>"users"}
+                                    POST   /users                                   {:action=>"create", :controller=>"users"}
+                                    POST   /users.:format                           {:action=>"create", :controller=>"users"}
+                           new_user GET    /users/new                               {:action=>"new", :controller=>"users"}
+                 formatted_new_user GET    /users/new.:format                       {:action=>"new", :controller=>"users"}
+                     unsuspend_user PUT    /users/:id/unsuspend                     {:action=>"unsuspend", :controller=>"users"}
+           formatted_unsuspend_user PUT    /users/:id/unsuspend.:format             {:action=>"unsuspend", :controller=>"users"}
+                       suspend_user PUT    /users/:id/suspend                       {:action=>"suspend", :controller=>"users"}
+             formatted_suspend_user PUT    /users/:id/suspend.:format               {:action=>"suspend", :controller=>"users"}
+                          edit_user GET    /users/:id/edit                          {:action=>"edit", :controller=>"users"}
+                formatted_edit_user GET    /users/:id/edit.:format                  {:action=>"edit", :controller=>"users"}
+                         purge_user DELETE /users/:id/purge                         {:action=>"purge", :controller=>"users"}
+               formatted_purge_user DELETE /users/:id/purge.:format                 {:action=>"purge", :controller=>"users"}
+                               user GET    /users/:id                               {:action=>"show", :controller=>"users"}
+                     formatted_user GET    /users/:id.:format                       {:action=>"show", :controller=>"users"}
+                                    PUT    /users/:id                               {:action=>"update", :controller=>"users"}
+                                    PUT    /users/:id.:format                       {:action=>"update", :controller=>"users"}
+                                    DELETE /users/:id                               {:action=>"destroy", :controller=>"users"}
+                                    DELETE /users/:id.:format                       {:action=>"destroy", :controller=>"users"}
+                                    POST   /session                                 {:action=>"create", :controller=>"sessions"}
+                                    POST   /session.:format                         {:action=>"create", :controller=>"sessions"}
+                        new_session GET    /session/new                             {:action=>"new", :controller=>"sessions"}
+              formatted_new_session GET    /session/new.:format                     {:action=>"new", :controller=>"sessions"}
+                       edit_session GET    /session/edit                            {:action=>"edit", :controller=>"sessions"}
+             formatted_edit_session GET    /session/edit.:format                    {:action=>"edit", :controller=>"sessions"}
+                            session GET    /session                                 {:action=>"show", :controller=>"sessions"}
+                  formatted_session GET    /session.:format                         {:action=>"show", :controller=>"sessions"}
+                                    PUT    /session                                 {:action=>"update", :controller=>"sessions"}
+                                    PUT    /session.:format                         {:action=>"update", :controller=>"sessions"}
+                                    DELETE /session                                 {:action=>"destroy", :controller=>"sessions"}
+                                    DELETE /session.:format                         {:action=>"destroy", :controller=>"sessions"}
+                           activate        /activate/:activation_code               {:action=>"activate", :controller=>"users"}
+                             signup        /signup                                  {:action=>"new", :controller=>"users"}
+                              login        /login                                   {:action=>"new", :controller=>"sessions"}
+                             logout        /logout                                  {:action=>"destroy", :controller=>"sessions"}
+                    forgot_password        /forgot_password                         {:action=>"forgot_password", :controller=>"users"}
+                     reset_password        /reset_password/:code                    {:action=>"reset_password", :controller=>"users"}
+                            account        /account                                 {:action=>"account", :controller=>"users"}
+                               home        /                                        {:action=>"search", :controller=>"home"}
+                                           /:controller/:action/:id                 
+                                           /:controller/:action/:id.:format         

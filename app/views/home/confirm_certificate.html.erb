@@ -1,0 +1,59 @@
+<h4>Please authorize the form</h4>
+<% form_tag '/home/generate_report' do -%>
+<table border="0" cellspacing="5" cellpadding="5" width="650 px">
+	<tr><th>Authorized Signature:</th><td><%= current_user.first_name -%></td></tr>
+	<tr><th>Name:</th><td><%= current_user.full_name -%></td></tr>
+	<tr><th>Title:</th><td><%= current_user.title -%></td></tr>
+	<tr><th>Company:</th><td><%= current_user.company -%></td></tr>
+	<tr><th>Authorization Date:</th><td><%= Time.now.to_date -%></td></tr>
+	<tr><th>Email:</th><td><%= current_user.email -%></td></tr>
+	<tr><th>Phone:</th><td><%= current_user.phone -%></td></tr>
+	<tr><th>Fax:</th><td><%= current_user.fax -%></td></tr>
+	<tr><td colspan="2"> 
+		<ul>
+			<li>
+				I CERTIFY THAT: 
+			</li>
+			<li>
+					THE INFORMATION ON THIS DOCUMENT IS TRUE AND ACCURATE AND I ASSUME THE RESPONSIBILITY FOR PROVING SUCH 
+				REPRESENTATIONS.  I UNDERSTAND THAT I AM LIABLE FOR ANY FALSE STATEMENTS OR MATERIAL OMISSIONS MADE ON OR IN 
+				CONNECTION WITH THIS DOCUMENT; 				
+			</li>
+			<li>
+				   I AGREE TO MAINTAIN AND PRESENT UPON REQUEST,  DOCUMENTATION NECESSARY TO SUPPORT THIS CERTIFICATE, AND TO 
+				INFORM, IN WRITING, ALL PERSONS TO WHOM THE CERTIFICATE WAS GIVEN OF ANY CHANGES THAT COULD AFFECT THE ACCURACY  
+				OR VALIDITY OF THIS CERTIFICATE; 				
+			</li>
+			<li>
+				 THE GOODS ORIGINATED IN THE TERRITORY OF ONE OR MORE OF THE PARTIES, AND COMPLY WITH THE ORIGIN REQUIREMENTS 
+				SPECIFIED FOR THOSE GOODS IN THE NORTH AMERICAN FREE TRADE AGREEMENT AND UNLESS SPECIFICALLY EXEMPTED IN ARTICLE 
+				411 OR ANNEX PARTIES; AND				
+			</li>
+			<li>
+				THIS CERTIFICATE CONSISTS OF PAGES, INCLUDING ALL ATTACHMENTS. 
+			</li>
+		</ul>	
+	</td></tr>
+	<tr><td colspan="2"><%= check_box_tag 'accept' -%>I had reviewed & I accept the above terms, please generate my report</td></tr>
+</table>
+
+<%= hidden_field_tag 'primary_supplier[id]', params[:primary_supplier][:id] -%>
+<%= hidden_field_tag 'primary_importer[id]', params[:primary_importer][:id] -%>
+<%= hidden_field_tag 'request_type', params[:request_type] -%>
+<%= hidden_field_tag 'from_date', params[:from_date] -%>
+<%= hidden_field_tag 'end_date', params[:end_date] -%>
+<%= hidden_field_tag 'reference_code', params[:reference_code] -%>
+<%= hidden_field_tag 'reference_number', params[:reference_number] -%>
+<% params[:part_id].each do |part_id| -%>
+	<%= hidden_field_tag 'part_id[]', part_id -%>
+<% end -%>
+<%= submit_tag 'Generate Report', :disabled => "true", :id => "commit_button" %>	
+<% end -%>
+
+<% content_for :js do -%>
+	<script type="text/javascript">
+		Event.observe('accept', 'click', function() {
+				$('commit_button').disabled = !$('accept').checked;
+			});
+	</script>
+<% end -%>

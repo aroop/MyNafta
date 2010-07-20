@@ -1,0 +1,41 @@
+<div id="mydiv" style="display:none; overflow:hidden; height:151px; width: 100%; background-color: #525252;"> 	
+	<!-- top gray main wrapper starts here -->
+	<% form_tag session_path do -%>
+		<div class="topgraymainwrapper" align="center">
+			<div class="topgraywrapper"> 
+				<div class="topgraycontainer">
+					<div class="topgrayleft"> Login to Mekosam: </div>
+					<div class="topgrayright"> 
+						<div class="topgrayrightcontainer"> 
+							<div class="topfieldcont">
+								<div class="topfieldname"> User name </div>
+								<div class="topfieldinput"><%= text_field_tag 'login' %></div>
+							</div>
+							<div class="topfieldcont">
+								<div class="topfieldname"> Password </div>
+								<div class="topfieldinput"><%= password_field_tag 'password' %></div>
+							</div>
+							<div class="topfieldcont">
+								<%= image_submit_tag "/images/login_button.gif", :border=>"0"  %> 
+							</div>
+						</div>
+						<div class="topgrayrightcontainer"> 
+							<div class="topfielhintcontainer">
+								<div class="topsignupbg"> <a href="/signup">Sign with Mekosam now</a> </div>
+								<div class="tophinticon"><img src="/images/login_key.gif" /></div>
+							</div>
+							<div class="topfielhintcontainer">
+								<div class="topsignupbg">
+									<%= link_to "Forgot your password?", forgot_password_url %>
+								</div>
+								<div class="tophinticon">
+									<img src="/images/login_question.gif" width="29" height="22" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> <!-- top gray main wrapper ends here -->
+	<% end -%>
+</div>

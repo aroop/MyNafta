@@ -1,0 +1,20 @@
+<strong>Type</strong>: <%= @address.address_type -%><br />
+<strong>Name</strong>: <%= @address.name -%><br />
+<strong>Contact</strong>: <%= @address.contact -%><br />
+<strong>Address 1</strong>: <%= @address.address_1 -%><br />
+<strong>Address 2</strong>: <%= @address.address_2 -%><br />
+<strong>Address 3</strong>: <%= @address.address_3 -%><br />
+<strong>Address 4</strong>: <%= @address.address_4 -%><br />
+<strong>City</strong>: <%= @address.city -%><br />
+<strong>County</strong>: <%= @address.county -%><br />
+<strong>State</strong>: <%= @address.state -%><br />
+<strong>Country</strong>: <%= @address.country -%><br />
+<strong>Tax ID</strong>: <%= @address.tax_id -%><br />
+<strong>DUNS Number</strong>: <%= @address.dunsnumber -%><br />
+<strong>Phone Number</strong>: <%= @address.phone_no -%><br />
+<strong>Email</strong>: <%= @address.email -%><br />
+<strong>Fax</strong>: <%= @address.fax -%><br />
+<strong>Postal Code</strong>: <%= @address.postal_code -%><br />
+<br />
+<%= link_to 'Edit', edit_address_path(@address) %> |
+<%= link_to 'Show all addresses', addresses_path %>

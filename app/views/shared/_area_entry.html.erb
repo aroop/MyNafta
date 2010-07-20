@@ -1,0 +1,7 @@
+<div class="regformcont"> 
+	<div class="regfieldname"><%= text -%></div>
+	<div class="regfieldinput"><%= @f.text_area field_name, :cols => '49', :rows => '10' -%></div>
+	<% if show_help = false -%>
+		<div class="regfieldquestionmark"><a href="#"><img border="0" src="/images/field_question.gif"/></a></div>
+	<% end -%>
+</div>

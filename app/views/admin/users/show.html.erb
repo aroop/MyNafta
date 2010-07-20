@@ -1,0 +1,24 @@
+<strong>Login </strong>: <%= @user.login -%><br /><br />
+<strong>Full Name </strong>: <%= @user.full_name -%><br /><br />
+<strong>Title </strong>: <%= @user.title -%><br /><br />
+<strong>Company </strong>: <%= @user.company -%><br /><br />
+<strong>E-Mail </strong>: <%= @user.email -%><br /><br />
+<strong>Phone </strong>: <%= @user.phone -%><br /><br />
+<strong>Fax </strong>: <%= @user.fax -%><br /><br />
+<strong>Assigned suppliers</strong>: 
+<table class="general">
+	<!--tr><th>Supplier</th></tr-->
+	<% @user.addresses.suppliers.each do |supplier| -%>
+	<tr><td><%= supplier.name -%></td></tr>
+	<% end -%>
+</table>
+<br /><br />
+<strong>Assigned importers</strong>:
+<table class="general">
+	<!--tr><th>Importer</th></tr-->
+	<% @user.addresses.importers.each do |importer| -%>
+	<tr><td><%= importer.name -%></td></tr>
+	<% end -%>
+</table>
+<br />
+<%= link_to 'Edit', edit_admin_user_path(@user) %> | <%= link_to 'Show all users', admin_users_path %>

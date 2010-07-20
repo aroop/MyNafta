@@ -1,0 +1,35 @@
+<h3>Listing addresses</h3>
+
+<table border="1" width="100%">
+  <tr>
+		<th width="50 px">ID</th>
+		<th>Type</th>
+		<th>Name</th>
+		<th>Contact</th>
+		<th>Phone Number</th>
+		<th>Email</th>
+		<th>Status</th>
+    <th width="150 px">Options</th>
+  </tr>
+
+<% for address in @addresses %>
+  <tr>
+		<td><%= address.id -%></td>
+		<td><%= address.address_type -%></td>
+		<td><%= address.name -%></td>
+		<td><%= address.contact -%></td>
+		<td><%= address.phone_no -%></td>
+		<td><%= address.email -%></td>
+		<td><%= address.status -%></td>
+    <td>
+				<%= link_to 'Show', address %> | 
+				<%= link_to 'Edit', edit_address_path(address) %> | 
+				<%= link_to 'Destroy', address, :confirm => 'Are you sure?', :method => :delete %>
+		</td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New address', new_address_path %>

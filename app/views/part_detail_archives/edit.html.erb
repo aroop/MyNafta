@@ -1,0 +1,12 @@
+<h1>Editing part_detail_archive</h1>
+
+<% form_for(@part_detail_archive) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @part_detail_archive %> |
+<%= link_to 'Back', part_detail_archives_path %>

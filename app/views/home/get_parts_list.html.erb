@@ -1,0 +1,47 @@
+<% form_tag '/home/confirm_certificate' do -%>
+	<% @suppliers.each do |supplier| %>
+	<% unless supplier.part_details.size == 0 -%>
+		<table class="general">
+			<caption><span>Supplier ID: </span><%= supplier.id -%>, <span>Name: </span><%= supplier.name %></caption>
+			<thead>
+			<tr>
+				<th width="5 px"></th>
+				<th>Supplier Item</th>
+				<th>Customer Item Number</th>
+				<th>Item Description</th>
+				<th>HS Tariff Code</th>
+				<th>Preference Criteria</th>
+				<th>Producer</th>
+				<th>Net Cost</th>
+				<th>NAFTA Origin</th>
+  		</tr>
+		</thead>
+			<% supplier.part_details.each do |part_detail| %>
+  		<tr>
+				<td><%= check_box_tag	:part_id, part_detail.id, checked=false, {:name => "part_id[]"} -%></td>
+				<td><%= link_to part_detail.supplier_item, edit_part_detail_path(part_detail) %></td>
+				<td><%= part_detail.item_number -%></td>
+				<td><%= part_detail.item_description -%></td>
+				<td><%= part_detail.hs_tariff_code -%></td>
+				<td><%= part_detail.pref_criteria -%></td>
+				<td><%= part_detail.producer -%></td>
+				<td><%= part_detail.net_cost -%></td>
+				<td><%= part_detail.nafta_coo -%></td>
+  		</tr>
+			<% end %>
+		</table>
+		<% end -%>
+	<% end %>
+	<br />
+	<%= hidden_field_tag 'primary_supplier[id]', params[:primary_supplier][:id] -%>
+	<%= hidden_field_tag 'primary_importer[id]', params[:primary_importer][:id] -%>
+	<%= hidden_field_tag 'request_type', params[:request_type] -%>
+	<%= hidden_field_tag 'from_date', params[:from_date] -%>
+	<%= hidden_field_tag 'end_date', params[:end_date] -%>
+	<%= hidden_field_tag 'reference_code', params[:reference_code] -%>
+	<%= hidden_field_tag 'reference_number', params[:reference_number] -%>
+	<div class="regformcont"> 
+		<div class="regfieldinput"><%= submit_tag 'Generate Certificate' %> </div>
+	</div>
+	
+<% end -%>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>fileTriggers</key>
+        <dict>
+            <key>DOS</key>
+            <string>app\views\home\do_search.html.erb</string>
+            <key>address</key>
+            <string>app\controllers\addresses_controller.rb</string>
+            <key>comme</key>
+            <string>db\migrate\20080603024136_create_comments.rb</string>
+            <key>dose</key>
+            <string>app\views\home\do_search.html.erb</string>
+            <key>edit</key>
+            <string>app\views\part_details\edit.html.erb</string>
+            <key>form</key>
+            <string>app\views\part_details\_form.html.erb</string>
+            <key>home</key>
+            <string>app\controllers\home_controller.rb</string>
+            <key>homec</key>
+            <string>app\controllers\home_controller.rb</string>
+            <key>index</key>
+            <string>app\views\part_details\index.html.erb</string>
+            <key>new</key>
+            <string>app\views\part_details\new.html.erb</string>
+            <key>partd</key>
+            <string>db\migrate\20080602081824_create_part_detail_archives.rb</string>
+            <key>partde</key>
+            <string>app\controllers\part_details_controller.rb</string>
+            <key>search</key>
+            <string>app\views\home\search.html.erb</string>
+            <key>show</key>
+            <string>app\views\part_details\show.html.erb</string>
+            <key>supplier</key>
+            <string>app\models\supplier.rb</string>
+        </dict>
+    </dict>
+</plist>

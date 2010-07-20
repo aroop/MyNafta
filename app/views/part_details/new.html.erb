@@ -1,0 +1,12 @@
+<h3>New part</h3>
+
+<% form_for(@part_detail) do |@f| %>
+  <%= @f.error_messages %>
+  <div class="registercontainer" id="content">
+		<%= render :partial => 'form' %>
+		<div class="regformcont"> 
+			<div class="regfieldname"></div>
+			<div class="regfieldinput"><%= @f.submit "Create" %> or, <%= link_to 'Go back', addresses_path %></div>
+		</div>
+  </div>
+<% end %>

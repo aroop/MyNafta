@@ -1,0 +1,18 @@
+<h1>Listing certified_repositories</h1>
+
+<table>
+  <tr>
+  </tr>
+
+<% for certified_repository in @certified_repositories %>
+  <tr>
+    <td><%= link_to 'Show', certified_repository %></td>
+    <td><%= link_to 'Edit', edit_certified_repository_path(certified_repository) %></td>
+    <td><%= link_to 'Destroy', certified_repository, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New certified_repository', new_certified_repository_path %>

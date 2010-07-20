@@ -1,0 +1,12 @@
+<h1>Editing config value</h1>
+
+<% form_for(@config_value) do |@f| %>
+  <%= @f.error_messages %>
+		<%= render :partial => 'form' %>
+  <p>
+    <%= @f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @config_value %> |
+<%= link_to 'Back', config_values_path %>

@@ -1,0 +1,46 @@
+<h1>Editing <%= @part_detail.supplier_item %></h1>
+
+<% form_for(@part_detail) do |@f| %>
+  <%= @f.error_messages %>
+  <div class="registercontainer" id="content">
+		<%= render :partial => '/shared/field_entry', :locals => {:text => 'Supplier Item:', :field_name => :supplier_item} %>
+		<div class="regformcont"> 
+			<div class="regfieldname">Item Number</div>
+			<div class="regfieldinput"><%= @part_detail.item_number %></div>
+		</div>
+		<%= render :partial => '/shared/area_entry', :locals => {:text => 'Item Description:', :field_name => :item_description} %>
+  	<%= render :partial => '/shared/field_entry', :locals => {:text => 'HS Tariff Code:', :field_name => :hs_tariff_code} %>
+		<div class="regformcont"> 
+			<div class="regfieldname">Preference Criteria:</div>
+			<div class="regfieldinput">
+				<%= collection_select(:part_detail, :pref_criteria, ConfigValue.preference_criterias, :value, :value) %>
+			</div>
+		</div>		
+		<div class="regformcont"> 
+			<div class="regfieldname">Producer:</div>
+			<div class="regfieldinput">
+				<%= collection_select(:part_detail, :producer, ConfigValue.producers, :value, :value) %>
+			</div>
+		</div>		
+		<div class="regformcont"> 
+			<div class="regfieldname">Net Cost:</div>
+			<div class="regfieldinput">
+				<%= collection_select(:part_detail, :net_cost, ConfigValue.net_costs, :value, :value) %>
+			</div>
+		</div>		
+		<div class="regformcont"> 
+			<div class="regfieldname">Nafta COO:</div>
+			<div class="regfieldinput">
+				<%= collection_select(:part_detail, :nafta_coo, ConfigValue.coos, :value, :value) %>
+			</div>
+		</div>
+		<div class="regformcont"> 
+			<div class="regfieldname">Supplier:</div>
+			<div class="regfieldinput"><%= Address.find(@part_detail.address_id).name %></div>
+		</div>
+		<div class="regformcont"> 
+			<div class="regfieldname"></div>
+			<div class="regfieldinput"><%= @f.submit "Update" %></div>
+		</div>
+  </div>
+<% end %>

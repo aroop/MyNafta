@@ -1,0 +1,40 @@
+8
+
+dir
+59
+https://jcomponent.svn.beanstalkapp.com/mekosam/trunk/vendor/plugins/action_mailer_optional_tls/lib
+https://jcomponent.svn.beanstalkapp.com/mekosam
+
+
+
+2008-05-08T09:02:32.312490Z
+18
+aroop
+
+
+svn:special svn:externals svn:needs-lock
+
+smtp_tls.rb
+file
+
+
+
+
+2008-05-08T08:47:13.000000Z
+7d0b1de8d6cdbafacacd98cd9087eecc
+2008-05-08T09:02:32.312490Z
+18
+aroop
+
+action_mailer_tls.rb
+file
+
+
+
+
+2008-05-08T08:47:12.000000Z
+021f1f06701962a2783fe6088ff3c99f
+2008-05-08T09:02:32.312490Z
+18
+aroop
+
